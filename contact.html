@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - Website Của Tôi</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <h1>Liên hệ</h1>
+    <nav>
+        <a href="index.html">Trang chủ</a>
+        <a href="about.html">Giới thiệu</a>
+        <a href="contact.html">Liên hệ</a>
+    </nav>
+</header>
+<main>
+    <section id="contact">
+      <h2>Gửi tin nhắn cho tôi</h2>
+      <form action="https://formspree.io/f/xxxxx" method="POST">
+        <label for="name">Tên của bạn:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email của bạn:</label>
+        <input type="email" id="email" name="_replyto" required>
+
+        <label for="message">Tin nhắn:</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Gửi</button>
+      </form>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2025 - Thiết kế bởi Tôi.</p>
+    <div>
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="#"><i class="fab fa-github fa-2x"></i></a>
+    </div>
+</footer>
+</body>
+</html>
