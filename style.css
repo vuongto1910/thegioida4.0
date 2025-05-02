@@ -3,37 +3,32 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    color: #f1e6f2;
+    color: #333;
     background-image: url('https://github.com/vuongto1910/thegioida4.0/raw/main/howl-s-moving-castle-studio-ghibli-fantasy-art-clouds-daylight-hd-wallpaper-3be62c2d93012fc995842bf94d4cdc00.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
-header {
-    background-color: rgba(0, 0, 0, 0.7);  /* Màu đen trong suốt (70%) */
-    color: yellow;  /* Chữ màu vàng */
-    padding: 20px;
+header, footer {
+    background-color: #333;
+    color: white;
     text-align: center;
+    padding: 20px 0;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);  /* Màu nền đen trong suốt */
+    color: white;  /* Chữ màu trắng */
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-    color: yellow;  /* Màu chữ vàng */
-    background-color: rgba(0, 0, 0, 0.5);  /* Màu nền đen trong suốt (có thể thay đổi màu theo ý bạn) */
-}
-
-footer div a {
-    color: white;
-    margin: 0 10px;
+    background-color: rgba(0, 0, 0, 0.7);  /* Màu nền đen trong suốt */
+    color: white;  /* Chữ màu trắng */
 }
 
 nav a {
-    color: #f0f5f5;
+    color: white;
     text-decoration: none;
     margin: 0 15px;
 }
@@ -46,7 +41,7 @@ main {
     padding: 20px;
     max-width: 900px;
     margin: auto;
-    background: #f0f5f5;
+    background: white;  /* Nền trắng cho phần main */
 }
 
 form {
@@ -72,4 +67,9 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+footer div a {
+    color: white;
+    margin: 0 10px;
 }
