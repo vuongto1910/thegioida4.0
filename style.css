@@ -23,8 +23,13 @@ header {
 }
 
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: yellow;  /* Chữ màu vàng */
     background-color: rgba(0, 0, 0, 0.7);  /* Màu nền đen trong suốt */
-    color: white;  /* Chữ màu trắng */
 }
 
 nav a {
@@ -41,7 +46,8 @@ main {
     padding: 20px;
     max-width: 900px;
     margin: auto;
-    background: white;  /* Nền trắng cho phần main */
+    background: none;  /* Xóa nền trắng của main để nhìn thấy ảnh nền */
+    color: white;  /* Đảm bảo chữ dễ đọc trên nền ảnh */
 }
 
 form {
