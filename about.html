@@ -1,13 +1,13 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Giới thiệu - Website Của Chúng tôi</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body>
+<body class="fade-in">
 <header>
     <h1>Giới thiệu</h1>
     <nav>
@@ -18,12 +18,12 @@
 </header>
 <main>
     <section>
-        <h2>Về tôi</h2>
-        <p>Chúng tôi là lập trình viên đẳng cấp yêu thích công nghệ và thiết kế website, Chúng tôi là nhóm 3 học sinh lần lượt là Vượng, Hoàng Linh, Phú tới từ 12A1 trường THPT Phúc Thọ. Đây là 1 dự án nhỏ rất mong được các bạn góp ý và cùng tiến bộ.</p>
+        <h2>Về chúng tôi</h2>
+        <p>Chúng tôi là một nhóm đam mê công nghệ, thiết kế và chia sẻ kiến thức thông qua website này. Mục tiêu của chúng tôi là mang đến trải nghiệm học tập và kết nối tốt nhất cho mọi người.</p>
     </section>
 </main>
 <footer>
-    <p>&copy; 2025 - Thiết kế bởi chúng tôi.</p>
+    <p>&copy; 2025 - Thiết kế bởi Chúng tôi.</p>
     <div>
         <a href="https://www.facebook.com/vuong.to.9235" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
         <a href="https://www.instagram.com/vug.to17/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
@@ -42,15 +42,12 @@
                 const href = this.getAttribute('href');
                 document.body.classList.remove('fade-in');
                 document.body.classList.add('fade-out');
-
                 setTimeout(() => {
                     window.location.href = href;
-                }, 300); // Thời gian trùng với transition (0.5s)
+                }, 500);
             });
         }
     }
 </script>
 </body>
 </html>
-
-
