@@ -1,10 +1,14 @@
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    min-height: 100vh;
+}
+
+body {
+    font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 
     background-image: url('https://github.com/vuongto1910/thegioida4.0/raw/main/howl-s-moving-castle-studio-ghibli-fantasy-art-clouds-daylight-hd-wallpaper-3be62c2d93012fc995842bf94d4cdc00.jpg');
     background-size: cover;
@@ -15,7 +19,6 @@ body {
     color: white;
 }
 
-
 header, footer {
     background-color: #333;
     color: white;
@@ -24,8 +27,8 @@ header, footer {
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.7);  /* Màu nền đen trong suốt */
-    color: white;  /* Chữ màu trắng */
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
 }
 
 footer {
@@ -38,7 +41,6 @@ footer {
     width: 100%;
 }
 
-
 nav a {
     color: white;
     text-decoration: none;
@@ -50,13 +52,12 @@ nav a:hover {
 }
 
 main {
+    flex: 1;
     padding: 20px;
     max-width: 900px;
     margin: auto;
-    background: transparent; /* Xóa nền trắng */
-    color: white; /* Chữ dễ đọc trên ảnh nền */
-}
-
+    background: transparent;
+    color: white;
 }
 
 form {
