@@ -13,11 +13,11 @@ body {
 
 header, footer {
     background-color: #f0f5f5;
-    color: white;
+    color: #f0f5f5;
     text-align: center;
     padding: 20px 0;
     header {
-    background-color: rgba(0, 0, 0, 0.5);  /* Màu đen trong suốt (50%) */
+    background-color: rgba(0, 0, 0, 0.7);  /* Màu đen trong suốt (70%) */
     color: yellow;  /* Chữ màu vàng */
     padding: 20px;
     text-align: center;
@@ -26,7 +26,7 @@ header, footer {
 }
 
 nav a {
-    color: white;
+    color: #f0f5f5;
     text-decoration: none;
     margin: 0 15px;
 }
@@ -39,7 +39,7 @@ main {
     padding: 20px;
     max-width: 900px;
     margin: auto;
-    background: white;
+    background: #f0f5f5;
 }
 
 form {
