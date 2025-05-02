@@ -6,6 +6,55 @@
     <title>Liên hệ - Website Của Chúng tôi</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Hiệu ứng fade-up cho contact */
+        .fade-up {
+            animation: fadeUp 0.7s ease-out forwards;
+        }
+
+        /* Phần animation fade-up */
+        @keyframes fadeUp {
+            from {
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Hiệu ứng slide-in cho các phần khác */
+        .fade-in {
+            animation: slide-in 0.5s ease-in-out forwards;
+        }
+
+        .fade-out {
+            animation: slide-out 0.5s ease-in-out forwards;
+        }
+
+        @keyframes slide-in {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slide-out {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -17,20 +66,20 @@
     </nav>
 </header>
 <main>
-    <section id="contact">
-      <h2>Gửi tin nhắn cho tôi</h2>
-      <form action="https://formspree.io/f/xxxxx" method="POST">
-        <label for="name">Tên của bạn:</label>
-        <input type="text" id="name" name="name" required>
+    <section class="fade-up" id="contact">
+        <h2>Gửi tin nhắn cho tôi</h2>
+        <form action="https://formspree.io/f/xxxxx" method="POST">
+            <label for="name">Tên của bạn:</label>
+            <input type="text" id="name" name="name" required>
 
-        <label for="email">Email của bạn:</label>
-        <input type="email" id="email" name="_replyto" required>
+            <label for="email">Email của bạn:</label>
+            <input type="email" id="email" name="_replyto" required>
 
-        <label for="message">Tin nhắn:</label>
-        <textarea id="message" name="message" rows="6" required></textarea>
+            <label for="message">Tin nhắn:</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
 
-        <button type="submit">Gửi</button>
-      </form>
+            <button type="submit">Gửi</button>
+        </form>
     </section>
 </main>
 <footer>
@@ -43,8 +92,10 @@
 </footer>
 
 <script>
+    // Khi trang được tải, sẽ kích hoạt hiệu ứng fade-in cho body
     document.body.classList.add('fade-in');
 
+    // Thêm sự kiện cho các liên kết trong trang để tạo hiệu ứng chuyển trang
     const links = document.querySelectorAll('a[href]');
     for (const link of links) {
         if (link.hostname === window.location.hostname) {
@@ -54,13 +105,13 @@
                 document.body.classList.remove('fade-in');
                 document.body.classList.add('fade-out');
 
+                // Sau khi hiệu ứng hoàn tất, chuyển hướng đến trang khác
                 setTimeout(() => {
                     window.location.href = href;
-                }, 300); // Thời gian trùng với transition (0.5s)
+                }, 500); // Thời gian trùng với animation (0.5s)
             });
         }
     }
 </script>
-
 </body>
 </html>
