@@ -71,12 +71,14 @@ button:hover {
 footer div a {
     color: white;
     margin: 0 10px;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
 }
 
 footer div a:hover {
     transform: scale(1.2); /* Tăng kích thước khi hover */
     color: #FFD700; /* Màu vàng khi hover */
+    background-color: rgba(255, 215, 0, 0.2); /* Thêm hiệu ứng nền mờ vàng */
+    border-radius: 50%; /* Làm cho icon tròn hơn khi hover */
 }
 
 /* Animation chuyển trang */
