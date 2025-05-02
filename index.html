@@ -6,6 +6,41 @@
     <title>Trang chủ - Website Của Chúng tôi</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* Hiệu ứng slide-in */
+        .fade-in {
+            animation: slide-in 0.5s ease-in-out forwards;
+        }
+
+        /* Hiệu ứng slide-out */
+        .fade-out {
+            animation: slide-out 0.5s ease-in-out forwards;
+        }
+
+        /* Phần animation của slide-in */
+        @keyframes slide-in {
+            from {
+                transform: translateX(100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* Phần animation của slide-out */
+        @keyframes slide-out {
+            from {
+                transform: translateX(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -30,5 +65,28 @@
         <a href="#"><i class="fab fa-github fa-2x"></i></a>
     </div>
 </footer>
+
+<script>
+    // Khi trang được tải, sẽ kích hoạt hiệu ứng fade-in
+    document.body.classList.add('fade-in');
+
+    // Thêm sự kiện cho các liên kết trong trang để tạo hiệu ứng chuyển trang
+    const links = document.querySelectorAll('a[href]');
+    for (const link of links) {
+        if (link.hostname === window.location.hostname) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                document.body.classList.remove('fade-in');
+                document.body.classList.add('fade-out');
+
+                // Sau khi hiệu ứng hoàn tất, chuyển hướng đến trang khác
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 500); // Thời gian trùng với animation (0.5s)
+            });
+        }
+    }
+</script>
 </body>
 </html>
