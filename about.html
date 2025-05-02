@@ -19,7 +19,7 @@
 <main>
     <section>
         <h2>Về tôi</h2>
-        <p>Chúng tôi là lập trình viên đẳng cấp yêu thích công nghệ và thiết kế website,Chúng tôi là nhóm 3 học sinh lần lượt là Vượng,Hoàng Linh,Phú tới từ 12A1 trường THPT Phúc Thọ.Đây là 1 dự án nhỏ rất mong được các bạn góp ý và cùng tiến bộ.</p>
+        <p>Chúng tôi là lập trình viên đẳng cấp yêu thích công nghệ và thiết kế website, Chúng tôi là nhóm 3 học sinh lần lượt là Vượng, Hoàng Linh, Phú tới từ 12A1 trường THPT Phúc Thọ. Đây là 1 dự án nhỏ rất mong được các bạn góp ý và cùng tiến bộ.</p>
     </section>
 </main>
 <footer>
@@ -30,5 +30,25 @@
         <a href="#"><i class="fab fa-github fa-2x"></i></a>
     </div>
 </footer>
+
+<script>
+    document.body.classList.add('fade-in');
+
+    const links = document.querySelectorAll('a[href]');
+    for (const link of links) {
+        if (link.hostname === window.location.hostname) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const href = this.getAttribute('href');
+                document.body.classList.remove('fade-in');
+                document.body.classList.add('fade-out');
+
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 300); // Thời gian trùng với transition (0.5s)
+            });
+        }
+    }
+</script>
 </body>
 </html>
