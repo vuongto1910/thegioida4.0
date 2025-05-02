@@ -24,70 +24,64 @@ header, footer {
     padding: 20px 0;
 }
 
-main {
-    flex: 1;
-    padding: 20px;
-    max-width: 900px;
-    margin: auto;
-    background: transparent;
-    color: white;
+/* Hiệu ứng fade-in cho body */
+body.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-input, textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    background-color: #007BFF;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-footer div a {
-    color: white;
-    margin: 0 10px;
-    transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
-}
-
-footer div a:hover {
-    transform: scale(1.2); /* Tăng kích thước khi hover */
-    color: #FFD700; /* Màu vàng khi hover */
-    background-color: rgba(255, 215, 0, 0.2); /* Thêm hiệu ứng nền mờ vàng */
-    border-radius: 50%; /* Làm cho icon tròn hơn khi hover */
-}
-
-/* Animation chuyển trang */
 body.fade-out {
     opacity: 0;
     transition: opacity 0.5s ease;
 }
 
-body.fade-in {
-    opacity: 1;
-    transition: opacity 0.5s ease;
+/* Hiệu ứng slide-in từ trái cho header */
+header.slide-in {
+    animation: slide-in 1s ease-out forwards;
+}
+
+/* Hiệu ứng slide-in từ phải cho main */
+main.slide-in {
+    animation: slide-in-right 1s ease-out forwards;
+}
+
+/* Hiệu ứng fade-in cho các phần như footer */
+footer.fade-up {
+    animation: fade-up 1s ease-out forwards;
+}
+
+/* Animation slide-in từ trái */
+@keyframes slide-in {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation slide-in từ phải */
+@keyframes slide-in-right {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animation fade-up */
+@keyframes fade-up {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
