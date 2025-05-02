@@ -46,8 +46,10 @@ main {
     padding: 20px;
     max-width: 900px;
     margin: auto;
-    background: none;  /* Xóa nền trắng của main để nhìn thấy ảnh nền */
-    color: white;  /* Đảm bảo chữ dễ đọc trên nền ảnh */
+    background: transparent; /* Xóa nền trắng */
+    color: white; /* Chữ dễ đọc trên ảnh nền */
+}
+
 }
 
 form {
