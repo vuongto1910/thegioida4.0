@@ -72,6 +72,7 @@ footer div a {
     color: white;
     margin: 0 10px;
 }
+
 /* Animation chuyển trang */
 body.fade-out {
     opacity: 0;
@@ -82,4 +83,52 @@ body.fade-in {
     opacity: 1;
     transition: opacity 0.5s ease;
 }
+
+/* Hiệu ứng slide-in */
+.fade-in {
+    animation: slide-in 0.5s ease-in-out forwards;
+}
+
+.fade-out {
+    animation: slide-out 0.5s ease-in-out forwards;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+/* Hiệu ứng fade-up cho contact */
+.fade-up {
+    animation: fadeUp 0.7s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 
