@@ -65,3 +65,10 @@ body {
     background-position: center;
     background-repeat: no-repeat;
 }
+header {
+    background-color: rgba(0, 0, 0, 0.5);  /* Màu đen trong suốt (50%) */
+    color: yellow;  /* Chữ màu vàng */
+    padding: 20px;
+    text-align: center;
+}
+
