@@ -1,62 +1,13 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Liên hệ - Website Của Chúng tôi</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <style>
-        /* Hiệu ứng fade-up cho contact */
-        .fade-up {
-            animation: fadeUp 0.7s ease-out forwards;
-        }
-
-        /* Phần animation fade-up */
-        @keyframes fadeUp {
-            from {
-                transform: translateY(30px);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        /* Hiệu ứng slide-in cho các phần khác */
-        .fade-in {
-            animation: slide-in 0.5s ease-in-out forwards;
-        }
-
-        .fade-out {
-            animation: slide-out 0.5s ease-in-out forwards;
-        }
-
-        @keyframes slide-in {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes slide-out {
-            from {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body>
+<body class="fade-in">
 <header>
     <h1>Liên hệ</h1>
     <nav>
@@ -66,7 +17,7 @@
     </nav>
 </header>
 <main>
-    <section class="fade-up" id="contact">
+    <section>
         <h2>Gửi tin nhắn cho tôi</h2>
         <form action="https://formspree.io/f/xxxxx" method="POST">
             <label for="name">Tên của bạn:</label>
@@ -83,7 +34,7 @@
     </section>
 </main>
 <footer>
-    <p>&copy; 2025 - Thiết kế bởi Chúng tôi</p>
+    <p>&copy; 2025 - Thiết kế bởi Chúng tôi.</p>
     <div>
         <a href="https://www.facebook.com/vuong.to.9235" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
         <a href="https://www.instagram.com/vug.to17/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
@@ -92,10 +43,8 @@
 </footer>
 
 <script>
-    // Khi trang được tải, sẽ kích hoạt hiệu ứng fade-in cho body
     document.body.classList.add('fade-in');
 
-    // Thêm sự kiện cho các liên kết trong trang để tạo hiệu ứng chuyển trang
     const links = document.querySelectorAll('a[href]');
     for (const link of links) {
         if (link.hostname === window.location.hostname) {
@@ -104,11 +53,9 @@
                 const href = this.getAttribute('href');
                 document.body.classList.remove('fade-in');
                 document.body.classList.add('fade-out');
-
-                // Sau khi hiệu ứng hoàn tất, chuyển hướng đến trang khác
                 setTimeout(() => {
                     window.location.href = href;
-                }, 500); // Thời gian trùng với animation (0.5s)
+                }, 500);
             });
         }
     }
