@@ -1,7 +1,103 @@
-/* Phần Team - Giới thiệu các thành viên */
+/* style.css - Dùng chung cho cả 3 trang */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('https://github.com/vuongto1910/thegioida4.0/raw/main/howl-s-moving-castle-studio-ghibli-fantasy-art-clouds-daylight-hd-wallpaper-3be62c2d93012fc995842bf94d4cdc00.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Animation fade */
+.fade-in {
+    animation: fadeIn 0.7s ease-in-out forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Layout */
+header, footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+footer i {
+    margin: 0 10px;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+footer i:hover {
+    color: gold;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* ========== PHẦN MỚI: Giới thiệu nhóm ========== */
 .team {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 20px;
     margin-top: 40px;
@@ -9,47 +105,47 @@
 
 .member {
     width: 200px;
-    background-color: rgba(255, 182, 193, 0.85); /* Hồng nhạt */
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     padding: 15px;
-    animation: fadeIn 0.7s ease-in-out forwards;
+    background-color: rgba(255, 182, 193, 0.9); /* Hồng nhạt */
+    border-radius: 12px;
+    text-align: center;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     opacity: 0;
+    animation: fadeIn 0.7s ease-in-out forwards;
 }
 
 .member img {
     width: 110px;
     height: 110px;
-    object-fit: cover;
     border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
     margin-bottom: 10px;
 }
 
 .member h3 {
     margin: 10px 0 5px;
     font-size: 1.1em;
-    color: #000;
 }
 
 .member p {
     font-style: italic;
-    color: #333;
-    margin-bottom: 5px;
+    margin: 5px 0;
 }
 
 .member ul {
-    list-style: none;
+    list-style-type: none;
     padding-left: 0;
-    color: #000;
-    font-size: 0.95em;
+    font-size: 0.9em;
+    margin: 10px 0 0;
 }
 
 .member ul li {
-    margin: 4px 0;
+    margin: 5px 0;
 }
 
-/* Hiệu ứng xuất hiện từng người */
+/* Hiệu ứng lần lượt */
 .member:nth-child(1) { animation-delay: 0s; }
 .member:nth-child(2) { animation-delay: 0.2s; }
 .member:nth-child(3) { animation-delay: 0.4s; }
