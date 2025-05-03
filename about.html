@@ -1,53 +1,63 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Giới thiệu - Website Của Chúng tôi</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="fade-in">
-<header>
-    <h1>Giới thiệu</h1>
-    <nav>
-        <a href="index.html">Trang chủ</a>
-        <a href="about.html">Giới thiệu</a>
-        <a href="contact.html">Liên hệ</a>
-    </nav>
-</header>
-<main>
-    <section>
-        <h2>Về chúng tôi</h2>
-        <p>Chúng tôi là một nhóm đam mê công nghệ, thiết kế và chia sẻ kiến thức thông qua website này. Mục tiêu của chúng tôi là mang đến trải nghiệm học tập và kết nối tốt nhất cho mọi người.</p>
-    </section>
-</main>
-<footer>
-    <p>&copy; 2025 - Thiết kế bởi Chúng tôi.</p>
-    <div>
-        <a href="https://www.facebook.com/vuong.to.9235" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
-        <a href="https://www.instagram.com/vug.to17/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="https://github.com/vuongto1910" target="_blank"><i class="fab fa-github fa-2x"></i></a>
-    </div>
-</footer>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="about.html">Giới thiệu</a>
+            <a href="contact.html">Liên hệ</a>
+        </nav>
+    </header>
 
-<script>
-    document.body.classList.add('fade-in');
+    <main>
+        <section class="team fade-in">
+            <div class="member">
+                <img src="https://github.com/vuongto1910/thegioida4.0/blob/main/b267f17f-4a82-4c98-b879-d1b4e1fd3aa0.jpg?raw=true" alt="Trưởng Buồng">
+                <h3>Tô Tiến Vượng</h3>
+                <p>Trưởng Buồng</p>
+                <ul>
+                    <li>Sinh ngày: 19/10/2007</li>
+                    <li>Sở thích: đi muôn nơi, khám phá, chơi game cùng bạn bè</li>
+                </ul>
+            </div>
+            <div class="member">
+                <img src="https://github.com/vuongto1910/thegioida4.0/blob/main/eb583d58-5cf5-447a-81a0-9c7da8e6e18a.jpg?raw=true" alt="Bác Sĩ">
+                <h3>Nguyễn Hoàng Linh</h3>
+                <p>Bác Sĩ</p>
+                <ul>
+                    <li>Sinh ngày: 13/09/2007</li>
+                    <li>Sở thích: Xem phim, kiếm đạo, tìm hiểu các kiến thức mới lạ... <br> Bộ phim yêu thích: Kimetsu no Yaiba</li>
+                </ul>
+            </div>
+            <div class="member">
+                <img src="https://github.com/vuongto1910/thegioida4.0/blob/main/76a5ad7b-7baf-4a8f-ba63-a4b36f52c0b6.jpg?raw=true" alt="Cu li">
+                <h3>Dương Thu Như</h3>
+                <p>Cu li</p>
+                <ul>
+                    <li>Sinh ngày: 02/11/2007</li>
+                    <li>Sở thích: Nói xấu người khác</li>
+                </ul>
+            </div>
+            <div class="member">
+                <img src="https://github.com/vuongto1910/thegioida4.0/blob/main/30d9810a-ca95-48db-8822-67aa7ce849ce.jpg?raw=true" alt="Moi">
+                <h3>Nguyễn Bá Phú</h3>
+                <p>Moi</p>
+                <ul>
+                    <li>Sinh ngày: 27/5/2007</li>
+                    <li>Sở thích: Đá bóng, học, bắn FF</li>
+                </ul>
+            </div>
+        </section>
+    </main>
 
-    const links = document.querySelectorAll('a[href]');
-    for (const link of links) {
-        if (link.hostname === window.location.hostname) {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                const href = this.getAttribute('href');
-                document.body.classList.remove('fade-in');
-                document.body.classList.add('fade-out');
-                setTimeout(() => {
-                    window.location.href = href;
-                }, 500);
-            });
-        }
-    }
-</script>
+    <footer>
+        <p>© 2025 Thegioida4.0 - Tất cả quyền được bảo lưu</p>
+    </footer>
 </body>
 </html>
